@@ -22,6 +22,11 @@ class TestSong:
 
     def test_has_song_count(self):
         '''counts the total number of Song objects.'''
+        Song.count = 0
+        song1 = Song("Song A", "Artist 1", "rap")
+        song2 = Song("Song B", "Artist 2", "afro")
+        song3 = Song("Song C", "Artist 3", "rock")
+        song4 = Song("Song D", "Artist 4", "rnb")
         assert(Song.count == 4)
         Song("Sara Smile", "Hall and Oates", "Pop")
         assert(Song.count == 5)
